@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Avatar API</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .endpoint {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discord Avatar API</h1>
+    <p>Simple API to fetch Discord user avatars using Lanyard API</p>
+    
+    <div class="endpoint">
+        <h2>Direct Image Endpoint</h2>
+        <p><code>GET /api/avatar?id=USERID</code></p>
+        <p>Redirects directly to the Discord avatar image.</p>
+        <p>Example: <a href="/api/avatar?id=1263110378666065944" target="_blank">/api/avatar?id=1263110378666065944</a></p>
+    </div>
+
+    <div class="endpoint">
+        <h2>JSON Endpoint</h2>
+        <p><code>GET /api/json?id=USERID</code></p>
+        <p>Returns a JSON response containing the avatar URL:</p>
+        <pre><code>{
+    "success": true,
+    "avatar_url": "https://cdn.discordapp.com/avatars/..."
+}</code></pre>
+        <p>Example: <a href="/api/json?id=1263110378666065944" target="_blank">/api/json?id=1263110378666065944</a></p>
+    </div>
+
+    <p>Powered by <a href="https://lanyard.rest/" target="_blank">Lanyard API</a></p>
+</body>
+</html>
